@@ -10,7 +10,7 @@ import {
 import { LANGUAGE_VERSIONS } from "../constants";
 
 const languages = Object.entries(LANGUAGE_VERSIONS);
-const ACTIVE_COLOR = "blue.400";
+const ACTIVE_COLOR = "white";
 
 const LanguageSelector = ({ language, onSelect }) => {
   return (
@@ -20,15 +20,15 @@ const LanguageSelector = ({ language, onSelect }) => {
       </Text>
       <Menu isLazy>
         <MenuButton as={Button}>{language}</MenuButton>
-        <MenuList bg="#110c1b">
+        <MenuList bg="#1E1E1EFF">
           {languages.map(([lang, version]) => (
             <MenuItem
               key={lang}
               color={lang === language ? ACTIVE_COLOR : ""}
-              bg={lang === language ? "gray.900" : "transparent"}
+              bg={lang === language ? "black" : "transparent"}
               _hover={{
                 color: ACTIVE_COLOR,
-                bg: "gray.900",
+                bg: "black",
               }}
               onClick={() => onSelect(lang)}
             >
